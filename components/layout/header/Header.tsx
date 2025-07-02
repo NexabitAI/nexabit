@@ -78,7 +78,7 @@ const Header = () => {
                 <ul>
                   <li className="has-megamenu">
                     <Link href="/">Home</Link>
-                    <ul className="sub-menu mega-menu menu-image">
+                    {/* <ul className="sub-menu mega-menu menu-image">
                       <li>
                         <div className="image text-center">
                           <Image src={one} alt="Image" priority />
@@ -135,14 +135,14 @@ const Header = () => {
                           <h6 className="text-white">Home Dark</h6>
                         </div>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="about">About</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="/service">Services</Link>
-                    <ul className="sub-menu">
+                    {/* <ul className="sub-menu">
                       <li>
                         <Link href="service-solutions">IT Solutions</Link>
                       </li>
@@ -152,21 +152,21 @@ const Header = () => {
                       <li>
                         <Link href="service-details">Service Details</Link>
                       </li>
-                    </ul>
+                    </ul> */}
                   </li>
                   <li>
-                    <Link href="/case">Pages</Link>
+                    <Link href="case">Cases</Link>
                     <ul className="sub-menu">
-                      <li>
+                      {/* <li>
                         <Link href="case">Case Study 01</Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link href="case-2">Case Study 02</Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link href="case-details">Case Study Details</Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link href="team">Our Team</Link>
                       </li>
                       <li>
@@ -180,27 +180,30 @@ const Header = () => {
                       </li>
                       <li>
                         <Link href="error">404 Error</Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li>
-                    <Link href="/blog">Blog</Link>
+                    <Link href="blog">Blog</Link>
                     <ul className="sub-menu">
-                      <li>
+                      {/* <li>
                         <Link href="blog">Blog Grid</Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link href="blog-standard">Blog Standard</Link>
-                      </li>
-                      <li>
+                      </li> */}
+                      {/* <li>
                         <Link href="blog-details">Blog Details</Link>
-                      </li>
+                      </li> */}
                     </ul>
+                  </li>
+                  <li>
+                    <Link href="about">About</Link>
                   </li>
                   <li>
                     <Link href="contact">Contact</Link>
                   </li>
-                  <li className="ml-20 d-none d-lg-block">
+                  {/* <li className="ml-20 d-none d-lg-block">
                     <a className="search-trigger" onClick={handleSearch}>
                       <svg
                         width="17"
@@ -222,7 +225,7 @@ const Header = () => {
                         </defs>
                       </svg>
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>
