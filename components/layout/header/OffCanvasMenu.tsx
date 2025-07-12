@@ -36,26 +36,27 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
       <Link href="/" className="logo mb-40">
         <Image src={svgLogo} alt="logo" />
       </Link>
-      <div className="sidebar__search mb-30">
+      {/* <div className="sidebar__search mb-30">
         <input type="text" placeholder="Search..." />
         <i className="fa-regular fa-magnifying-glass"></i>
-      </div>
+      </div> */}
       <div className="mobile-menu overflow-hidden">
         <nav className="mean-nav">
           <ul>
             <li className="has-megamenu">
-              <a
-                className={`drop ${isSubMenuButton("home")}`}
+              {/* <a
+                className={` ${isSubMenuButton("home")}`} //drop
                 onClick={() => handleSubmenu("home")}
               >
                 Home
-              </a>
-              <ul
+              </a> */}
+              <Link href="/">Home</Link>
+              {/* <ul
                 className={`sub-menu mega-menu menu-image ${isSubMenuOpen(
                   "home"
                 )}`}
-              >
-                <li>
+              > */}
+              {/* <li>
                   <div className="image text-center">
                     <Image src={one} alt="Image" priority />
                     <div className="btn__group">
@@ -101,20 +102,22 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
                     </div>
                     <h6 className="text-white">Home Dark</h6>
                   </div>
-                </li>
-              </ul>
+                </li> */}
+              {/* </ul> */}
             </li>
             <li>
               <Link href="about">About</Link>
             </li>
             <li>
-              <a
-                className={`drop ${isSubMenuButton("services")}`}
+              <Link href="service">Services</Link>
+
+              {/* <a
+                className={` ${isSubMenuButton("services")}`}
                 onClick={() => handleSubmenu("services")}
               >
                 Services
-              </a>
-              <ul className={`sub-menu ${isSubMenuOpen("services")}`}>
+              </a> */}
+              {/* <ul className={`sub-menu ${isSubMenuOpen("services")}`}>
                 <li>
                   <Link href="service-solutions">IT Solutions</Link>
                 </li>
@@ -124,9 +127,9 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
                 <li>
                   <Link href="service-details">Service Details</Link>
                 </li>
-              </ul>
+              </ul> */}
             </li>
-            <li>
+            {/* <li>
               <a
                 className={`drop ${isSubMenuButton("pages")}`}
                 onClick={() => handleSubmenu("pages")}
@@ -159,15 +162,22 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
                   <Link href="error">404 Error</Link>
                 </li>
               </ul>
+            </li> */}
+            <li>
+              <Link href="case">Cases</Link>
+            </li><li>
+              <Link href="team">Our Team</Link>
             </li>
             <li>
-              <a
+              {/* <a
                 className={`drop ${isSubMenuButton("blog")}`}
                 onClick={() => handleSubmenu("blog")}
               >
                 Blog
-              </a>
-              <ul className={`sub-menu ${isSubMenuOpen("blog")}`}>
+              </a> */}
+              <Link href="/blog">Blog</Link>
+
+              {/* <ul className={`sub-menu ${isSubMenuOpen("blog")}`}>
                 <li>
                   <Link href="blog">Blog Grid</Link>
                 </li>
@@ -177,7 +187,7 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
                 <li>
                   <Link href="blog-details">Blog Details</Link>
                 </li>
-              </ul>
+              </ul> */}
             </li>
             <li>
               <Link href="contact">Contact</Link>
@@ -196,7 +206,7 @@ const OffCanvasMenu = ({ toggleMenu, handleToggleMenu }: any) => {
         </li>
         <li>
           <i className="fa-solid primary-color fa-paper-plane"></i>{" "}
-          <Link href="/">info@example.com</Link>
+          <Link href="/">Hamza@example.com</Link>
         </li>
       </ul>
       <div className="social-icon mt-20">

@@ -137,6 +137,9 @@ const Header = () => {
                       </li>
                     </ul> */}
                   </li>
+                  <li>
+                    <Link href="about">About</Link>
+                  </li>
                   {/* <li>
                     <Link href="about">About</Link>
                   </li> */}
@@ -184,6 +187,9 @@ const Header = () => {
                     </ul>
                   </li>
                   <li>
+                    <Link href="team">Our Team</Link>
+                  </li>
+                  <li>
                     <Link href="blog">Blog</Link>
                     <ul className="sub-menu">
                       {/* <li>
@@ -197,9 +203,9 @@ const Header = () => {
                       </li> */}
                     </ul>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="about">About</Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link href="contact">Contact</Link>
                   </li>
