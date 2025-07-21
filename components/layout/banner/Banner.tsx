@@ -471,7 +471,7 @@ const Banner = () => {
                     className="mt-20"
                   >
                     Consectetur adipiscing elit aenean scelerisque at augue
-                    vitae consequat
+                    vitae testing
                     <br />
                     quisque eget congue velit in cursus leo sed sodales est eget
                     turpis.
