@@ -1,31 +1,36 @@
-name: 🚀 Deploy to VPS
+name: Deploy Nexabit App
 
 on:
   push:
     branches:
-      - main
+      - main   
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 📦 Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: 🔐 Set up SSH & Deploy
-      run: |
-        mkdir -p ~/.ssh
-        echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/id_ed25519
-        chmod 600 ~/.ssh/id_ed25519
-        ssh-keyscan 161.97.105.98 >> ~/.ssh/known_hosts
-        echo -e "Host myvps\n  HostName 161.97.105.98\n  User root\n  IdentityFile ~/.ssh/id_ed25519\n  StrictHostKeyChecking no" >> ~/.ssh/config
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'   
 
-        ssh myvps << 'EOF'
-          cd /root/mainfile
-          git reset --hard origin/main
-          git pull origin main
-          npm install
-          npm run build
-          pm2 restart main-file
-        EOF
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          port: 22
+          script: |
+            cd /var/www/nexabit
+            git pull origin main
+            npm install 
+            npm run build
+            pm2 stop nexabit || true
+            pm2 delete nexabit || true
+            pm2 start npm --name "nexabit" -- start
+            pm2 save

@@ -474,7 +474,7 @@ const Banner = () => {
                     vitae testing
                     <br />
                     quisque eget congue velit in cursus leo sed sodales est eget
-                    turpis.
+                    turpis testing pipelines.
                   </p>
                   <Link
                     data-animation="slideInRight"
