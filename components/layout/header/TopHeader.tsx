@@ -23,7 +23,7 @@ const TopHeader = () => {
               </svg>
 
               <Link href="/" className="ms-1">
-                hamzaBilal@nexabit.com
+                hamza@nexabit.ai
               </Link>
             </li>
             <li className="ms-4">
